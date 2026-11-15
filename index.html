@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d13">
+  <meta name="description" content="KILLZONE — динамічний 2D survival-шутер про останній рубіж людства. Обирай героя, зброю та бийся до останньої хвилі.">
+  <title>KILLZONE — виживи. Адаптуйся. Перемагай.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ff5b50'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Arial' font-weight='900' font-size='48' fill='%23090d13'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css?v=13">
+  <script src="script.js?v=5" defer></script>
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="KILLZONE — на головну">
+      <span class="brand-mark" aria-hidden="true">K</span>
+      <span class="brand-name">KILLZONE<span class="brand-period">.</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Відкрити меню">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Головна навігація">
+      <a href="#game">Про гру</a>
+      <a href="#features">Особливості</a>
+      <a href="#fighters">Бійці</a>
+      <a href="#shop">Магазин</a>
+      <a href="#worlds">Світ</a>
+      <a href="#promocodes">Промокоди</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-download" href="downloads/Killzone.exe" download>Завантажити <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="game">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> ПК · WINDOWS · 2D SURVIVAL</p>
+        <h1>КІНЕЦЬ СВІТУ.<br><span>ТВІЙ ПОЧАТОК.</span></h1>
+        <p class="hero-lead">Місто впало. Орди вже близько. Зберися, обери бійця й доведи, що останнє слово — за тобою.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="downloads/Killzone.exe" download>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m0 0 4-4m-4 4L6 8M3 14v3h14v-3"/></svg>
+            ЗАВАНТАЖИТИ ГРУ
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-quiet" href="#screens"><span class="play-icon" aria-hidden="true">▶</span> ДИВИТИСЬ ГРУ</a>
+        </div>
+        <div class="hero-meta">
+          <span><i class="meta-icon">⌖</i> Сам собі останній рубіж</span>
+          <span><i class="meta-icon">⚡</i> Хвилі без перепочинку</span>
+        </div>
+      </div>
+
+      <div class="hero-art-wrap reveal reveal-delay" aria-label="Ілюстрація бою у зруйнованому неоновому місті">
+        <div class="art-corner art-corner-top" aria-hidden="true"></div>
+        <div class="hero-art">
+          <svg class="city-scene" viewBox="0 0 780 590" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">Боєць готується до бою на тлі зруйнованого міста</title>
+            <defs>
+              <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#131a29"/><stop offset="1" stop-color="#202339"/></linearGradient>
+              <linearGradient id="street" x2="0" y2="1"><stop stop-color="#343141"/><stop offset="1" stop-color="#10151d"/></linearGradient>
+              <linearGradient id="sign" x2="1"><stop stop-color="#ff5449"/><stop offset="1" stop-color="#ff9a57"/></linearGradient>
+              <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#a9b5ca" stroke-opacity=".06"/></pattern>
+              <filter id="glow"><feGaussianBlur stdDeviation="9"/></filter>
+            </defs>
+            <rect width="780" height="590" fill="url(#sky)"/>
+            <rect width="780" height="590" fill="url(#grid)"/>
+            <circle cx="572" cy="142" r="79" fill="#ff5449" opacity=".17" filter="url(#glow)"/>
+            <circle cx="572" cy="142" r="40" fill="#ff7864" opacity=".88"/>
+            <circle cx="582" cy="131" r="38" fill="#282336"/>
+            <path d="M0 281 72 250l25 16 24-62 43 23 35-77 61 43 23-19 33 32 33-78 32 17 30-45 48 36 25-43 40 30 31-20 37 37 25-13 34 39 47-20 46 35 47-7v200H0Z" fill="#151a25"/>
+            <path d="M0 282 70 251l29 16 25-49 43 24 31-62 59 40 31-14 32 38 29-20 31 16 32-37 34 25 35-15 29 24 35-6 28 31 38-15 48 34v97H0Z" fill="#1e2430"/>
+            <g fill="#f3a761" opacity=".58">
+              <path d="M96 247h8v13h-8zm34-27h8v13h-8zm44 25h8v13h-8zm88 3h7v12h-7zm41-4h8v12h-8zm102-45h8v12h-8zm51 15h8v12h-8zm56 14h8v12h-8zm66 19h8v12h-8zm63-16h8v12h-8z"/>
+            </g>
+            <path d="M0 376 780 331v259H0Z" fill="url(#street)"/>
+            <path d="M0 386 780 344" stroke="#fd6155" stroke-opacity=".58" stroke-width="3"/>
+            <path d="m0 464 780-77M0 513l780-76M0 563l780-75" stroke="#707787" stroke-opacity=".12"/>
+            <path d="m85 590 212-208m152 208 87-226m-432 226 62-125m499 125-80-195" stroke="#ff7663" stroke-opacity=".15" stroke-width="2"/>
+            <path d="M71 353h117v-60H71z" fill="#272c39" stroke="#556071"/>
+            <path d="M83 338h94v-32H83z" fill="url(#sign)"/>
+            <text x="130" y="329" fill="#171a21" font-family="Arial,sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="3">SAFE?</text>
+            <path d="M0 401h52v-6H0m674-35h106v-5H674" fill="#ff6152" opacity=".8"/>
+            <g transform="translate(472 336)">
+              <ellipse cx="70" cy="194" rx="74" ry="12" fill="#080b11" opacity=".64"/>
+              <path d="m41 119-14 62 25 4 25-51 26 45 23-8-17-65Z" fill="#202c39" stroke="#758392" stroke-width="2"/>
+              <path d="m43 179-4 18 42 1 4-9-24-11m30-5 4 16 42 0 2-9-26-12" fill="#11161e" stroke="#717e8d" stroke-width="2"/>
+              <path d="m31 66-17 19-9 49 15 7 19-40 12-15m58-10 18 5 31 31-11 13-34-22-17-3" fill="#303c4a" stroke="#8a98a6" stroke-width="2"/>
+              <path d="m39 60 15-14 43 5 15 19-9 57-62 1-13-34Z" fill="#364656" stroke="#9ba8b6" stroke-width="2"/>
+              <path d="m49 78 46 1-5 36-36 1Z" fill="#19222d"/>
+              <path d="M59 60h33l-4 9H58Z" fill="#ff664f"/>
+              <path d="m57 56 6-26 24-2 14 29-13 17H62Z" fill="#e1b99c" stroke="#f0d2b9" stroke-width="2"/>
+              <path d="m54 45 5-23 27-9 24 21-4 24-10-12-24-4-10 13Z" fill="#151b24"/>
+              <path d="m101 51 9-9 9 2-5 14-9 5" fill="#dbb49a"/>
+              <path d="M63 40h9m18-1h8" stroke="#ff594d" stroke-width="4" stroke-linecap="round"/>
+              <path d="m86 88 26-14 52 6 6 10-48 5-19 18-21-5Z" fill="#171c25" stroke="#778697" stroke-width="2"/>
+              <path d="m145 81 30 4m-30 4 30 2" stroke="#ff6a54" stroke-width="3"/>
+              <path d="m41 124 59-4m-41 22 40 2" stroke="#ff614e" stroke-width="3" opacity=".8"/>
+            </g>
+            <g transform="translate(645 361)" fill="#111720" stroke="#707783" stroke-width="2">
+              <path d="m13 58 2-25 13-12 15 3 10 16 4 30-8 26-9 8-7 32-12 2-6-27-12 24-12-5 10-42Z"/>
+              <path d="m12 35 3-19 19-7 16 12-1 16-9-7-13 4-10 7Z" fill="#25232d"/>
+              <path d="M17 37h10m13-3h8" stroke="#ff6755" stroke-width="4"/>
+            </g>
+            <g fill="#ff765e"><circle cx="403" cy="411" r="3"/><circle cx="374" cy="427" r="2"/><circle cx="428" cy="442" r="2"/><circle cx="568" cy="374" r="2"/></g>
+            <path d="M22 22h42M22 22v42m736-42h-42m42 0v42M22 568h42m-42 0v-42m736 42h-42m42 0v-42" fill="none" stroke="#b3bfce" stroke-opacity=".47"/>
+          </svg>
+          <div class="hud-card hud-level"><span class="hud-label">ЗОНА</span><strong>04 <i>/ 09</i></strong><span class="hud-bar"><b></b></span></div>
+          <div class="hud-card hud-weapon"><span class="weapon-symbol" aria-hidden="true">⌁</span><span><span class="hud-label">ОЗБРОЄННЯ</span><strong>M416 <i>· 30</i></strong></span></div>
+          <span class="art-coordinate">51°30'26.4"N&nbsp; 30°05'22.1"E</span>
+        </div>
+        <div class="art-caption"><span class="caption-dot"></span> НЕОН-ДИСТРИКТ <span>·</span> ЗАГРОЗА ВИСОКА</div>
+        <div class="art-corner art-corner-bottom" aria-hidden="true"></div>
+      </div>
+      <div class="hero-index" aria-hidden="true"><span>01</span> / 04</div>
+    </section>
+
+    <div class="signal-strip" aria-label="Тривога: ворог наближається">
+      <div class="signal-track" aria-hidden="true">
+        <div class="signal-group" data-marquee-group>
+          <span><i class="status-dot"></i> ЗАГРОЗА НАБЛИЖАЄТЬСЯ</span><b>✳</b><span>НЕ ДОВІРЯЙ ТИШІ</span><b>✳</b><span>ЗАЛИШИ СЛІД</span><b>✳</b>
+        </div>
+      </div>
+    </div>
+
+    <section class="intro section-shell section-space reveal" id="features">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="section-number">01</span> ТВОЯ ІСТОРІЯ ВИЖИВАННЯ</p>
+        <h2>НЕ ГЕРОЙСТВО.<br><span>ІНСТИНКТ.</span></h2>
+      </div>
+      <div class="intro-copy">
+        <p>Постапокаліптичний 2D-шутер, де кожне рішення має значення. Прокладай шлях крізь заражені райони, збирай спорядження й тримай оборону, коли почнеться наступна хвиля.</p>
+        <a class="text-link" href="#screens">Зазирнути в гру <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section class="feature-grid section-shell" aria-label="Особливості гри">
+      <article class="feature-card feature-card-large reveal">
+        <span class="feature-index">01 / РУХ</span>
+        <div class="feature-icon feature-icon-crosshair" aria-hidden="true">⌖</div>
+        <h3>Тримай темп</h3>
+        <p>Стрибай, ухиляйся, стріляй. На полі бою секунди — це різниця між перемогою й екраном поразки.</p>
+        <span class="feature-line"></span>
+        <span class="feature-watermark" aria-hidden="true">01</span>
+      </article>
+      <article class="feature-card reveal reveal-delay">
+        <span class="feature-index">02 / АРСЕНАЛ</span>
+        <div class="feature-icon feature-icon-weapon" aria-hidden="true">⌁</div>
+        <h3>Обирай свій калібр</h3>
+        <p>Від Glock до AWM. Заробляй монети, купуй зброю та підлаштовуйся під загрозу.</p>
+        <span class="feature-line"></span>
+        <span class="feature-watermark" aria-hidden="true">02</span>
+      </article>
+      <article class="feature-card reveal">
+        <span class="feature-index">03 / ВИКЛИК</span>
+        <div class="feature-icon feature-icon-danger" aria-hidden="true">✳</div>
+        <h3>Жодного спокою</h3>
+        <p>Обери складність. Витримай нескінченні хвилі й зустрінь того, хто стоїть за зараженням.</p>
+        <span class="feature-line"></span>
+        <span class="feature-watermark" aria-hidden="true">03</span>
+      </article>
+    </section>
+
+    <section class="fighters section-shell section-space" id="fighters">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span class="section-number">02</span> ТВОЯ КОМАНДА</p>
+        <h2>ЧОТИРИ БІЙЦІ.<br><span>ЧОТИРИ СТИЛІ.</span></h2>
+      </div>
+      <p class="fighters-intro reveal">Обери оперативника під власну тактику: витримуй удар, випереджай ворога або тримай дистанцію.</p>
+      <div class="fighter-grid">
+        <article class="fighter-card fighter-vanguard reveal">
+          <div class="fighter-art"><span class="fighter-scanline"></span><span class="fighter-id">OPERATIVE / 01</span><span class="fighter-initial" aria-hidden="true">V</span>
+            <svg viewBox="0 0 180 190" role="img" aria-label="Ілюстрація бійця Vanguard">
+              <path class="fighter-shadow" d="M22 190c4-36 27-51 52-55h33c28 4 48 20 52 55z"/>
+              <path class="fighter-suit" d="m48 131-10 3-7 23 14 7-3 26h100l-3-26 14-7-8-23-14-4-20-12H73z"/>
+              <path class="fighter-armor" d="m74 120 4-23h25l5 24-16 15z"/>
+              <path class="fighter-gear" d="m42 137 22 2 7 19-25-3m67-15 24-3 9 17-28 3" fill="none" stroke-width="7" stroke-linejoin="round"/>
+              <path class="fighter-skin" d="m68 71 8-29 33-7 17 26-8 39-16 19-25-10-12-20z"/>
+              <path class="fighter-helmet" d="m62 66 8-39 34-18 33 23-5 28-14-13-36 4-9 24z"/>
+              <path class="fighter-armor" d="m70 59 12-10 35-3 16 11-2 14-25-5-26 7z"/>
+              <path class="fighter-accent" d="M70 68h17m18-3h17" fill="none" stroke-width="5" stroke-linecap="round"/>
+              <path class="fighter-accent" d="m87 124 5 7 5-7" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="fighter-gear" d="m53 139 39 12 37-14m-48 21 21 4" fill="none" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="fighter-copy"><div class="fighter-title"><h3>Vanguard</h3><span>GUARDIAN</span></div><p>Збалансований захисник із міцним здоров’ям.</p>
+            <div class="fighter-stats"><span>HP <b>120</b></span><span>SPD <b>+0</b></span><span>JMP <b>+0</b></span></div>
+            <div class="fighter-loadout"><span>СТАРТОВА ЗБРОЯ</span><b>GLOCK</b></div>
+          </div>
+        </article>
+        <article class="fighter-card fighter-blaze reveal reveal-delay">
+          <div class="fighter-art"><span class="fighter-scanline"></span><span class="fighter-id">OPERATIVE / 02</span><span class="fighter-initial" aria-hidden="true">B</span>
+            <svg viewBox="0 0 180 190" role="img" aria-label="Ілюстрація бійця Blaze">
+              <path class="fighter-shadow" d="m16 190 17-30 6-24 28-15 39 3 19 18 2 24 42 24z"/>
+              <path class="fighter-scarf" d="m72 82-35 22 13 8 25-8 15 15-35-3-26 12-13-8 27-27-10-9z"/>
+              <path class="fighter-suit" d="m67 124 14-9 25 4 19 17-1 54H48l8-51z"/>
+              <path class="fighter-armor" d="m76 120 3-21 23 2 4 22-14 11z"/>
+              <path class="fighter-skin" d="m68 71 8-29 33-7 17 26-8 39-16 19-25-10-12-20z"/>
+              <path class="fighter-helmet" d="m60 58 11-27 21 5 11-18 6 22 29-8-7 30-22-9-29 9-17 20z"/>
+              <path class="fighter-accent" d="M70 68h17m18-3h17" fill="none" stroke-width="5" stroke-linecap="round"/>
+              <path class="fighter-armor" d="m90 143 25 4-4 30-25-2z"/>
+              <path class="fighter-gear" d="m60 137 24 13m-13-8 12 41m38-37-15 12" fill="none" stroke-width="4" stroke-linecap="round"/>
+              <path class="fighter-accent" d="m56 117 18 11-9 8-17-10" fill="none" stroke-width="4" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="fighter-copy"><div class="fighter-title"><h3>Blaze</h3><span>RUNNER</span></div><p>Швидкий боєць для сміливих ривків і стрибків.</p>
+            <div class="fighter-stats"><span>HP <b>90</b></span><span>SPD <b>+22</b></span><span>JMP <b>+18</b></span></div>
+            <div class="fighter-loadout"><span>СТАРТОВА ЗБРОЯ</span><b>UMP</b></div>
+          </div>
+        </article>
+        <article class="fighter-card fighter-ghost reveal">
+          <div class="fighter-art"><span class="fighter-scanline"></span><span class="fighter-id">OPERATIVE / 03</span><span class="fighter-initial" aria-hidden="true">G</span>
+            <svg viewBox="0 0 180 190" role="img" aria-label="Ілюстрація бійця Ghost">
+              <path class="fighter-shadow" d="m15 190 13-38 15-15-7-18 10-42 17-33 36-17 31 16 24 42-7 45 14 24 11 36z"/>
+              <path class="fighter-cape" d="m70 98-30 18-21 62 12 12 34-43 50 0 31 42 15-9-14-57-33-28z"/>
+              <path class="fighter-suit" d="m62 126 16-10 26 1 19 11 13 62H48z"/>
+              <path class="fighter-armor" d="m77 120 3-22 24-1 5 24-16 12z"/>
+              <path class="fighter-skin" d="m71 66 8-21 30-5 14 25-6 28-19 14-20-12-10-17z"/>
+              <path class="fighter-hood" d="m58 77 5-42 23-24 35-4 32 33 10 39-20-20 8-32-21-19-27 13-10 35-5 24"/>
+              <path class="fighter-armor" d="m72 73 11-9 15 4 9-5 19 9-5 12-17-3-18 5-12-4z"/>
+              <path class="fighter-accent" d="M82 76h8m22-1h8" fill="none" stroke-width="4" stroke-linecap="round"/>
+              <path class="fighter-gear" d="m67 139 25 11 27-13m-28 9v43m48-48 22 16" fill="none" stroke-width="5" stroke-linecap="round"/>
+              <path class="fighter-rifle" d="m105 131 25-8 39 4 4 5-40 4-9 9-16-2m43-7 15 1" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="fighter-copy"><div class="fighter-title"><h3>Ghost</h3><span>SCOUT</span></div><p>Легкий і спритний розвідник із влучною стрільбою.</p>
+            <div class="fighter-stats"><span>HP <b>96</b></span><span>SPD <b>+18</b></span><span>JMP <b>+12</b></span></div>
+            <div class="fighter-loadout"><span>СТАРТОВА ЗБРОЯ</span><b>M416</b></div>
+          </div>
+        </article>
+        <article class="fighter-card fighter-sentinel reveal reveal-delay">
+          <div class="fighter-art"><span class="fighter-scanline"></span><span class="fighter-id">OPERATIVE / 04</span><span class="fighter-initial" aria-hidden="true">S</span>
+            <svg viewBox="0 0 180 190" role="img" aria-label="Ілюстрація бійця Sentinel">
+              <path class="fighter-shadow" d="m6 190 6-39 14-23 23-9 6-17 7-31 13-25 34-17 39 16 15 37 2 37 16 22 5 49z"/>
+              <path class="fighter-suit" d="m46 126 22-17h43l24 16 22 65H22l18-54z"/>
+              <path class="fighter-armor" d="m73 119 2-24h31l5 28-20 16z"/>
+              <path class="fighter-armor" d="m42 120-29 6-9 26 13 17 35-10m84-35 28 5 13 24-13 18-38-11" fill="none" stroke-width="10" stroke-linejoin="round"/>
+              <path class="fighter-armor" d="m60 139 31-11 32 10-8 31-48 1z"/>
+              <path class="fighter-accent" d="m78 146 13-7 14 8-13 11z" fill="none" stroke-width="3" stroke-linejoin="round"/>
+              <path class="fighter-skin" d="m69 68 7-24 34-7 16 24-8 36-18 14-22-12-10-17z"/>
+              <path class="fighter-helmet" d="m59 67 5-44 34-20 39 18 11 50-24-16-40 1-13 21z"/>
+              <path class="fighter-armor" d="m69 61 9-9 45-3 17 13-5 22-13 11-38-2-12-14z"/>
+              <path class="fighter-accent" d="m79 68 12-3m17-1 14 2" fill="none" stroke-width="5" stroke-linecap="round"/>
+              <path class="fighter-gear" d="m52 150 16 20m64-20-13 22m-39-3 23 1" fill="none" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="fighter-copy"><div class="fighter-title"><h3>Sentinel</h3><span>PROTECTOR</span></div><p>Важка броня та витривалість для міцної оборони.</p>
+            <div class="fighter-stats"><span>HP <b>135</b></span><span>SPD <b>-6</b></span><span>JMP <b>+10</b></span></div>
+            <div class="fighter-loadout"><span>СТАРТОВА ЗБРОЯ</span><b>AKM</b></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shop-section section-space" id="shop">
+      <div class="section-shell">
+        <div class="shop-heading reveal">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="section-number">03</span> ПОЛЬОВЕ ПОСТАЧАННЯ</p>
+            <h2>МАГАЗИН <span>СПОРЯДЖЕННЯ.</span></h2>
+          </div>
+          <p>Ціни в монетах — як у грі. Придбати бійця чи зброю можна у внутрішньоігровому магазині.</p>
+        </div>
+        <div class="shop-tabs reveal" role="tablist" aria-label="Категорії магазину">
+          <button class="shop-tab" type="button" role="tab" id="shop-tab-fighters" aria-selected="true" aria-controls="shop-panel-fighters" tabindex="0" data-shop-tab="fighters"><span>01</span> БІЙЦІ <b>04</b></button>
+          <button class="shop-tab" type="button" role="tab" id="shop-tab-weapons" aria-selected="false" aria-controls="shop-panel-weapons" tabindex="-1" data-shop-tab="weapons"><span>02</span> ЗБРОЯ ТА СПОРЯДЖЕННЯ <b>08</b></button>
+          <span class="shop-balance"><i></i> ВНУТРІШНЬОІГРОВІ МОНЕТИ</span>
+        </div>
+        <div class="shop-panel shop-skin-grid" id="shop-panel-fighters" role="tabpanel" aria-labelledby="shop-tab-fighters" data-shop-panel="fighters">
+          <article class="shop-item">
+            <div class="shop-item-visual shop-item-blue"><span>V</span><i>01</i></div>
+            <div class="shop-item-info"><span class="shop-item-kind">GUARDIAN / SKIN</span><h3>Vanguard</h3><p>Збалансований стартовий боєць.</p><div class="shop-item-bottom"><span class="shop-price shop-free">БЕЗКОШТОВНО</span><span class="shop-owned">ВІДКРИТО</span></div></div>
+            <button class="shop-buy" type="button" data-shop-buy aria-expanded="false">ЯК ПРИДБАТИ <span>↗</span></button><p class="shop-buy-note" data-shop-note aria-live="polite" hidden></p>
+          </article>
+          <article class="shop-item">
+            <div class="shop-item-visual shop-item-orange"><span>B</span><i>02</i></div>
+            <div class="shop-item-info"><span class="shop-item-kind">RUNNER / SKIN</span><h3>Blaze</h3><p>Швидкість +22 · стрибок +18.</p><div class="shop-item-bottom"><span class="shop-price"><i>●</i> 50 МОНЕТ</span><span class="shop-lock">ЗАБЛОКОВАНО</span></div></div>
+            <button class="shop-buy" type="button" data-shop-buy aria-expanded="false">ЯК ПРИДБАТИ <span>↗</span></button><p class="shop-buy-note" data-shop-note aria-live="polite" hidden></p>
+          </article>
+          <article class="shop-item">
+            <div class="shop-item-visual shop-item-violet"><span>G</span><i>03</i></div>
+            <div class="shop-item-info"><span class="shop-item-kind">SCOUT / SKIN</span><h3>Ghost</h3><p>Швидкість +18 · стрибок +12.</p><div class="shop-item-bottom"><span class="shop-price"><i>●</i> 80 МОНЕТ</span><span class="shop-lock">ЗАБЛОКОВАНО</span></div></div>
+            <button class="shop-buy" type="button" data-shop-buy aria-expanded="false">ЯК ПРИДБАТИ <span>↗</span></button><p class="shop-buy-note" data-shop-note aria-live="polite" hidden></p>
+          </article>
+          <article class="shop-item">
+            <div class="shop-item-visual shop-item-green"><span>S</span><i>04</i></div>
+            <div class="shop-item-info"><span class="shop-item-kind">PROTECTOR / SKIN</span><h3>Sentinel</h3><p>Здоров’я 135 · важка броня.</p><div class="shop-item-bottom"><span class="shop-price"><i>●</i> 100 МОНЕТ</span><span class="shop-lock">ЗАБЛОКОВАНО</span></div></div>
+            <button class="shop-buy" type="button" data-shop-buy aria-expanded="false">ЯК ПРИДБАТИ <span>↗</span></button><p class="shop-buy-note" data-shop-note aria-live="polite" hidden></p>
+          </article>
+        </div>
+        <div class="shop-panel shop-weapon-grid" id="shop-panel-weapons" role="tabpanel" aria-labelledby="shop-tab-weapons" data-shop-panel="weapons" hidden>
+          <article class="weapon-item"><span class="weapon-item-number">01</span><span class="weapon-item-glyph">╾━╸</span><span class="weapon-item-copy"><span>ПІСТОЛЕТ · DMG 18</span><strong>Glock</strong></span><span class="weapon-item-price"><i>●</i> 20</span></article>
+          <article class="weapon-item"><span class="weapon-item-number">02</span><span class="weapon-item-glyph">╾╾━╸</span><span class="weapon-item-copy"><span>ПІСТОЛЕТ-КУЛЕМЕТ · DMG 21</span><strong>UMP</strong></span><span class="weapon-item-price"><i>●</i> 26</span></article>
+          <article class="weapon-item weapon-item-featured"><span class="weapon-item-number">03</span><span class="weapon-item-glyph">╾━━━╸</span><span class="weapon-item-copy"><span>ШТУРМОВА · DMG 26</span><strong>M416</strong></span><span class="weapon-item-price"><i>●</i> 34</span></article>
+          <article class="weapon-item"><span class="weapon-item-number">04</span><span class="weapon-item-glyph">╾━━━━╸</span><span class="weapon-item-copy"><span>ШТУРМОВА · DMG 30</span><strong>AKM</strong></span><span class="weapon-item-price"><i>●</i> 46</span></article>
+          <article class="weapon-item"><span class="weapon-item-number">05</span><span class="weapon-item-glyph">╾━━━━━━╸</span><span class="weapon-item-copy"><span>СНАЙПЕРСЬКА · DMG 60</span><strong>AWM</strong></span><span class="weapon-item-price"><i>●</i> 70</span></article>
+          <article class="weapon-item"><span class="weapon-item-number">06</span><span class="weapon-item-glyph">╱</span><span class="weapon-item-copy"><span>БЛИЖНІЙ БІЙ · DMG 35</span><strong>Knife</strong></span><span class="weapon-item-price"><i>●</i> 18</span></article>
+          <article class="weapon-item"><span class="weapon-item-number">07</span><span class="weapon-item-glyph">✳</span><span class="weapon-item-copy"><span>ВИБУХОВА · DMG 70</span><strong>Frag Grenade</strong></span><span class="weapon-item-price"><i>●</i> 55</span></article>
+          <article class="weapon-item"><span class="weapon-item-number">08</span><span class="weapon-item-glyph">◌</span><span class="weapon-item-copy"><span>ТАКТИЧНА · DMG 20</span><strong>Smoke Grenade</strong></span><span class="weapon-item-price"><i>●</i> 35</span></article>
+        </div>
+        <div class="shop-footer reveal"><p>Заробляй монети в бою та відкривай нове спорядження безпосередньо у грі.</p><a class="button button-primary" href="downloads/Killzone.exe" download>ЗАВАНТАЖИТИ ГРУ <span class="button-arrow" aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="showcase section-space" id="screens">
+      <div class="section-shell">
+        <div class="showcase-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="section-number">04</span> КАДРИ З ПОЛЯ БОЮ</p>
+            <h2>ПОБАЧ СВОЇМИ <span>ОЧИМА.</span></h2>
+          </div>
+          <div class="slider-controls">
+            <span class="slider-count"><b data-current-slide>01</b><i>/</i>03</span>
+            <button class="slider-button" type="button" data-slider-prev aria-label="Попередній кадр">←</button>
+            <button class="slider-button" type="button" data-slider-next aria-label="Наступний кадр">→</button>
+          </div>
+        </div>
+
+        <div class="showcase-slider reveal" data-slider aria-roledescription="карусель" aria-label="Сцени з гри">
+          <div class="showcase-track" data-slider-track>
+            <article class="showcase-slide" aria-label="Кадр 1 з 3: Неон-Дистрикт">
+              <div class="screen-art screen-neon">
+                <svg viewBox="0 0 1100 540" role="img" aria-label="Неонові руїни Неон-Дистрикту">
+                  <defs><linearGradient id="neon-bg" y2="1"><stop stop-color="#151a2a"/><stop offset="1" stop-color="#302133"/></linearGradient></defs>
+                  <rect width="1100" height="540" fill="url(#neon-bg)"/><circle cx="855" cy="111" r="64" fill="#ff6858" opacity=".8"/>
+                  <path d="M0 317 85 290v-99l74-32v168l77-13V109l90-41v301l72-30V160l88-37v280l69-15V159l95-21v284l72-35V103l86-31v329l73-42V194l89-49v215l64-30v243H0z" fill="#1d2330"/>
+                  <g fill="#f5a166" opacity=".55"><path d="M105 235h10v22h-10zm105 21h10v22h-10zm145-105h10v18h-10zm190 32h10v19h-10zm155 4h10v20h-10zm170-35h10v21h-10z"/></g>
+                  <path d="M0 406 1100 350v190H0Z" fill="#1a1b25"/><path d="M0 416 1100 361" stroke="#ff6655" stroke-width="4" opacity=".72"/>
+                  <path d="m70 540 310-140m210 140 140-153m230 153-95-174" stroke="#ff6757" opacity=".22" stroke-width="3"/>
+                  <path d="M525 328h100l-20-32h-73z" fill="#303847"/><circle cx="574" cy="269" r="19" fill="#d9b29a"/><path d="m552 293 45 0 24 89-92 6z" fill="#46586a"/><path d="m550 311-40 44m86-34 46-10" stroke="#758597" stroke-width="16"/><path d="m541 376-13 63m62-61 25 59" stroke="#202832" stroke-width="21"/><path d="M588 317h83" stroke="#111923" stroke-width="11"/><path d="M665 317h30" stroke="#ff6655" stroke-width="4"/>
+                  <g fill="#ff6b5d"><circle cx="479" cy="370" r="4"/><circle cx="453" cy="381" r="2"/><circle cx="725" cy="363" r="3"/></g>
+                </svg>
+                <span class="screen-tag">ЛОКАЦІЯ 01 <i>·</i> НЕОН-ДИСТРИКТ</span>
+              </div>
+              <div class="slide-caption"><div><span class="eyebrow">01 — ЗОНА КОНТАКТУ</span><h3>Місто, що не спить.</h3></div><p>Залишки цивілізації стали лабіринтом. А кожна тінь тут може рухатись.</p></div>
+            </article>
+            <article class="showcase-slide" aria-label="Кадр 2 з 3: боєць серед руїн">
+              <div class="screen-art screen-ash">
+                <svg viewBox="0 0 1100 540" role="img" aria-label="Боєць зі зброєю захищає прохід між руїнами">
+                  <defs><linearGradient id="ash-bg" y2="1"><stop stop-color="#1b1a20"/><stop offset=".7" stop-color="#51332b"/><stop offset="1" stop-color="#16191d"/></linearGradient></defs>
+                  <rect width="1100" height="540" fill="url(#ash-bg)"/><circle cx="260" cy="156" r="80" fill="#ff9c65" opacity=".53"/>
+                  <path d="M0 315 115 205l74 66 66-129 100 100 89-133 121 130 72-67 88 74 88-112 92 126 78-49 117 115v215H0Z" fill="#29252a"/>
+                  <path d="M0 412h160l76-155 43 11 63 126h139l57-198 70 15 90 183h142l58-103 61 20 56 101h85v128H0Z" fill="#292a2d"/>
+                  <path d="M0 427h110l35-75 29 75m91-1 43-97 42 96m234 2 52-123 51 123m237 1 39-66 37 66" fill="none" stroke="#f0885c" stroke-width="5" opacity=".48"/>
+                  <g transform="translate(492 185)"><path d="m33 89-22 75 29 9 34-56 34 58 31-9-24-90z" fill="#35414b"/><path d="m43 60 25-26 59 8 20 32-15 65-78-7-20-37z" fill="#52616a" stroke="#c1b2a0" stroke-width="3"/><path d="m69 60 40-3-7 33-32 4z" fill="#202a31"/><path d="m59 39 11-27 31-7 25 27-13 34-42 4z" fill="#d0aa8f"/><path d="m54 36 14-38 42-8 31 36-13 19-16-18-36 4-13 18z" fill="#1b2025"/><path d="m54 84-41 40m141-36 52-21" fill="none" stroke="#87929a" stroke-width="18"/><path d="m132 94 87-13" stroke="#141a20" stroke-width="13"/><path d="m213 81 32 1" stroke="#ffb05e" stroke-width="5"/><path d="m65 152-8 76m69-74 25 74" stroke="#252c32" stroke-width="24"/></g>
+                  <path d="M0 461h1100" stroke="#ff735b" stroke-opacity=".65" stroke-width="3"/><g fill="#ff9b67"><circle cx="449" cy="367" r="4"/><circle cx="679" cy="333" r="3"/><circle cx="743" cy="402" r="4"/></g>
+                </svg>
+                <span class="screen-tag">БОЄЦЬ 01 <i>·</i> VANGUARD</span>
+              </div>
+              <div class="slide-caption"><div><span class="eyebrow">02 — ВИБІР БІЙЦЯ</span><h3>Твій стиль. Твої правила.</h3></div><p>Обирай персонажа, налаштовуй спорядження й виходь назустріч небезпеці.</p></div>
+            </article>
+            <article class="showcase-slide" aria-label="Кадр 3 з 3: битва з босом">
+              <div class="screen-art screen-bio">
+                <svg viewBox="0 0 1100 540" role="img" aria-label="Великий мутант наступає з токсичної імли">
+                  <defs><linearGradient id="bio-bg" y2="1"><stop stop-color="#101922"/><stop offset=".65" stop-color="#19352e"/><stop offset="1" stop-color="#101817"/></linearGradient><radialGradient id="bio-glow"><stop stop-color="#94eb6c" stop-opacity=".48"/><stop offset="1" stop-color="#94eb6c" stop-opacity="0"/></radialGradient></defs>
+                  <rect width="1100" height="540" fill="url(#bio-bg)"/><ellipse cx="718" cy="255" rx="312" ry="220" fill="url(#bio-glow)"/>
+                  <path d="M0 313 103 218l75 46 90-113 83 92 77-56 90 107 97-129 76 75 78-103 90 75 87-55 154 126v257H0Z" fill="#172c2a"/>
+                  <path d="M0 431h1100v109H0Z" fill="#17201d"/><path d="M0 430h1100" stroke="#8ddd75" stroke-opacity=".55" stroke-width="4"/>
+                  <g transform="translate(620 130)" fill="#263832" stroke="#78907a" stroke-width="4"><path d="m134 77 57-46 72 15 44 57 19 108-27 77-41 18-12 94-35 5-25-81-59 81-38-11 24-103-45-28-25-82 14-91Z"/><path d="m136 81 13-44 66-31 77 37 30 65-32-11-34-37-52 8-37 45z" fill="#374b3b"/><path d="M166 99h37m43-4h39" stroke="#b0ef72" stroke-width="11"/><path d="m120 117-74 89 26 25 97-72m172-39 84 78-26 26-111-53" fill="#293d34"/></g>
+                  <g transform="translate(240 284)"><path d="m28 48 17-28 37-3 26 30-10 48-57 2z" fill="#dfb69a"/><path d="m22 37 13-37 57-7 27 33-18 25-9-18-47 4-12 17z" fill="#171e23"/><path d="m37 90 70-3 24 100-42 13-25-51-26 52-37-12z" fill="#4a5961"/><path d="m51 120-44 20m90-28 55-28" stroke="#879393" stroke-width="16"/><path d="m142 108 74-8" stroke="#12191e" stroke-width="12"/><path d="m209 100 31 0" stroke="#fa7555" stroke-width="4"/><path d="m42 194-4 67m49-66 22 67" stroke="#242d30" stroke-width="21"/></g>
+                  <path d="M707 96h253" stroke="#80d66b" stroke-opacity=".78" stroke-width="7"/><path d="M707 96h166" stroke="#d7f297" stroke-width="7"/><text x="707" y="82" fill="#d2e8cc" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">BOSS HP</text>
+                  <g fill="#b9f27d"><circle cx="531" cy="364" r="5"/><circle cx="571" cy="393" r="3"/><circle cx="955" cy="358" r="4"/><circle cx="608" cy="338" r="3"/></g>
+                </svg>
+                <span class="screen-tag">БОС <i>·</i> НЕБЕЗПЕКА ПОПЕРЕДУ</span>
+              </div>
+              <div class="slide-caption"><div><span class="eyebrow">03 — ОСТАННЯ ХВИЛЯ</span><h3>Великий ворог. Один шанс.</h3></div><p>Поповнюй боєзапас, стеж за здоров'ям і готуйся до зустрічі з босом.</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="slider-progress" aria-hidden="true"><span data-slider-progress></span></div>
+      </div>
+    </section>
+
+    <section class="worlds section-shell section-space" id="worlds">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span class="section-number">05</span> ТЕРИТОРІЇ ПІД ЗАГРОЗОЮ</p>
+        <h2>КОЖНА ЗОНА — <span>НОВА ЗАГРОЗА.</span></h2>
+      </div>
+      <div class="world-grid">
+        <article class="world-card world-neon reveal">
+          <span class="world-number">01</span><span class="world-status"><i></i> ДОСТУПНА</span>
+          <div class="world-visual" aria-hidden="true"><span class="world-sun"></span><span class="world-building"></span><span class="world-building"></span><span class="world-building"></span></div>
+          <div class="world-info"><h3>Неон-Дистрикт</h3><p>Кібернетичні алеї й тісні коридори</p></div>
+        </article>
+        <article class="world-card world-ash reveal reveal-delay">
+          <span class="world-number">02</span><span class="world-status"><i></i> ДОСТУПНА</span>
+          <div class="world-visual" aria-hidden="true"><span class="world-sun"></span><span class="world-building"></span><span class="world-building"></span><span class="world-building"></span></div>
+          <div class="world-info"><h3>Попелястий рубіж</h3><p>Згорілі руїни й розпечені дороги</p></div>
+        </article>
+        <article class="world-card world-frozen reveal reveal-delay">
+          <span class="world-number">03</span><span class="world-status"><i></i> ДОСТУПНА</span>
+          <div class="world-visual" aria-hidden="true"><span class="world-sun"></span><span class="world-building"></span><span class="world-building"></span><span class="world-building"></span></div>
+          <div class="world-info"><h3>Крижаний край</h3><p>Застиглі руїни й покинуті форпости</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="promocodes section-shell section-space" id="promocodes">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span class="section-number">06</span> ПЕРЕХІД ДО ЗАКРИТИХ ЗОН</p>
+        <h2>ВІДКРИЙ ТЕ,<br><span>ЩО ПРИХОВАНО.</span></h2>
+      </div>
+      <p class="promo-intro reveal">Отримай код доступу та введи його в меню гри, щоб відкрити нову мапу.</p>
+      <div class="promo-grid">
+        <article class="promo-card promo-bio reveal">
+          <div class="promo-card-top"><span class="promo-number">ЗОНА 04</span><span class="promo-lock" aria-hidden="true">⌑</span></div>
+          <div class="promo-card-main"><span class="promo-symbol" aria-hidden="true">☣</span><span class="promo-zone-type">РАДІОАКТИВНЕ БОЛОТО</span><h3>Bio Wasteland</h3><p>Токсичний туман. Жодного безпечного маршруту.</p></div>
+          <div class="promo-reward"><span>НАГОРОДА</span><strong>НОВА МАПА</strong></div>
+          <button class="button button-promo" type="button" data-promo-reveal data-code="BIO2026" aria-expanded="false">ОТРИМАТИ ПРОМОКОД <span aria-hidden="true">↗</span></button>
+          <div class="promo-code-box" data-promo-box hidden><span class="promo-code-label">КОД ДОСТУПУ</span><div class="promo-code-row"><code data-promo-code></code><button class="promo-copy" type="button" data-promo-copy aria-label="Скопіювати промокод">КОПІЮВАТИ</button></div><p class="promo-feedback" data-promo-feedback aria-live="polite"></p></div>
+        </article>
+        <article class="promo-card promo-magma reveal reveal-delay">
+          <div class="promo-card-top"><span class="promo-number">ЗОНА 05</span><span class="promo-lock" aria-hidden="true">⌑</span></div>
+          <div class="promo-card-main"><span class="promo-symbol" aria-hidden="true">△</span><span class="promo-zone-type">ВОГНЯНІ ПЕЧЕРИ</span><h3>Magma Caverns</h3><p>Розпечена лава. Крок у темряві — останній.</p></div>
+          <div class="promo-reward"><span>НАГОРОДА</span><strong>НОВА МАПА</strong></div>
+          <button class="button button-promo" type="button" data-promo-reveal data-code="BURN99" aria-expanded="false">ОТРИМАТИ ПРОМОКОД <span aria-hidden="true">↗</span></button>
+          <div class="promo-code-box" data-promo-box hidden><span class="promo-code-label">КОД ДОСТУПУ</span><div class="promo-code-row"><code data-promo-code></code><button class="promo-copy" type="button" data-promo-copy aria-label="Скопіювати промокод">КОПІЮВАТИ</button></div><p class="promo-feedback" data-promo-feedback aria-live="polite"></p></div>
+        </article>
+        <article class="promo-card promo-cyber reveal reveal-delay">
+          <div class="promo-card-top"><span class="promo-number">ЗОНА 06</span><span class="promo-lock" aria-hidden="true">⌑</span></div>
+          <div class="promo-card-main"><span class="promo-symbol" aria-hidden="true">⌘</span><span class="promo-zone-type">ЦИФРОВА ПУСТКА</span><h3>Cyber Void</h3><p>Віртуальний лабіринт. Система вже бачить тебе.</p></div>
+          <div class="promo-reward"><span>НАГОРОДА</span><strong>НОВА МАПА</strong></div>
+          <button class="button button-promo" type="button" data-promo-reveal data-code="CYBERX" aria-expanded="false">ОТРИМАТИ ПРОМОКОД <span aria-hidden="true">↗</span></button>
+          <div class="promo-code-box" data-promo-box hidden><span class="promo-code-label">КОД ДОСТУПУ</span><div class="promo-code-row"><code data-promo-code></code><button class="promo-copy" type="button" data-promo-copy aria-label="Скопіювати промокод">КОПІЮВАТИ</button></div><p class="promo-feedback" data-promo-feedback aria-live="polite"></p></div>
+        </article>
+      </div>
+      <p class="promo-hint reveal"><span aria-hidden="true">⌁</span> У головному меню гри натисни <kbd>P</kbd>, введи код і натисни Enter.</p>
+    </section>
+
+    <section class="loadout section-shell section-space reveal">
+      <div class="loadout-copy">
+        <p class="eyebrow"><span class="section-number">07</span> ПЕРЕД ВИХОДОМ</p>
+        <h2>НЕСИ ТЕ,<br><span>ЩО ПРАЦЮЄ.</span></h2>
+        <p>Заробляй монети за виживання. Glock, UMP, M416, AKM, AWM — обирай свій інструмент і не марнуй набої.</p>
+        <a class="text-link" href="#download">У бій <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="arsenal" aria-label="Арсенал Killzone">
+        <div class="arsenal-top"><span>АРСЕНАЛ / ПОЛЬОВИЙ ЗВІТ</span><span>01—05 <i>↗</i></span></div>
+        <div class="weapon-row"><span class="weapon-number">01</span><span class="weapon-glyph">╾━╸</span><span class="weapon-name">GLOCK</span><span class="weapon-type">SIDEARM</span><span class="weapon-ready">ГОТОВО</span></div>
+        <div class="weapon-row"><span class="weapon-number">02</span><span class="weapon-glyph">╾╾━╸</span><span class="weapon-name">UMP</span><span class="weapon-type">SMG</span><span class="weapon-ready">ГОТОВО</span></div>
+        <div class="weapon-row weapon-featured"><span class="weapon-number">03</span><span class="weapon-glyph">╾━━━╸</span><span class="weapon-name">M416</span><span class="weapon-type">ASSAULT</span><span class="weapon-ready">ОСНАЩЕНО</span></div>
+        <div class="weapon-row"><span class="weapon-number">04</span><span class="weapon-glyph">╾━━━━━╸</span><span class="weapon-name">AKM</span><span class="weapon-type">ASSAULT</span><span class="weapon-ready">ГОТОВО</span></div>
+        <div class="weapon-row"><span class="weapon-number">05</span><span class="weapon-glyph">╾━━━━━━━━╸</span><span class="weapon-name">AWM</span><span class="weapon-type">SNIPER</span><span class="weapon-ready">ГОТОВО</span></div>
+        <div class="arsenal-bottom"><span>ВСЕ РІШЕННЯ — ЗА ТОБОЮ</span><span>КООРДИНАТИ ВТРАЧЕНО</span></div>
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <div class="section-shell controls-inner reveal">
+        <div><p class="eyebrow"><span class="section-number">08</span> ШВИДКЕ КЕРУВАННЯ</p><h2>ІНСТИНКТИ — <span>ТВОЯ ЗБРОЯ.</span></h2></div>
+        <div class="control-list">
+          <div class="control-item"><span class="key-cluster"><kbd>A</kbd><kbd>W</kbd><kbd>S</kbd><kbd>D</kbd></span><span>Рух бійця</span></div>
+          <div class="control-item"><span class="key-cluster"><kbd>SPACE</kbd></span><span>Стрибок / подвійний стрибок</span></div>
+          <div class="control-item"><span class="key-cluster"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd></span><span>Вибір бійця або зброї</span></div>
+          <div class="control-item"><span class="key-cluster"><kbd>МИША</kbd></span><span>Приціл і вогонь</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-shell section-space" id="faq">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span class="section-number">09</span> ПЕРЕД ВИСАДКОЮ</p>
+        <h2>Є ПИТАННЯ?<br><span>Є ВІДПОВІДІ.</span></h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary><span>Що це за гра?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <p>KILLZONE — динамічний 2D survival-шутер. Досліджуй зони, відбивай хвилі ворогів, збирай монети й готуйся до битви з босом.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Як завантажити та запустити гру?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <p>Натисни «Завантажити гру», збережи KILLZONE.exe та відкрий файл на Windows. Для запуску окремо встановлювати Python не потрібно.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Які тут є бійці та зброя?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <p>Обирай між Vanguard, Blaze, Ghost і Sentinel. У грі доступні Glock, UMP, M416, AKM, AWM, ніж та гранати — частину спорядження можна купити за монети.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>У грі є різні рівні складності?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <p>Так. Перед стартом обери легкий, нормальний або складний режим. Кожен із них змінює швидкість, кількість ворогів і силу фінального боса.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Чи можу я грати на телефоні?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+          <p>Ця версія гри створена для Windows-комп'ютерів. Сайт підлаштовується під телефон і планшет, але сам файл гри запускається у Windows.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="download-cta" id="download">
+      <div class="cta-grid" aria-hidden="true"></div>
+      <div class="section-shell cta-inner reveal">
+        <p class="eyebrow"><span class="status-dot"></span> ОСТАННІЙ РУБІЖ ЧЕКАЄ</p>
+        <h2>МІСТО НЕ ВРЯТУВАТИ.<br><span>СЕБЕ — МОЖНА.</span></h2>
+        <p>Збирай спорядження. Тримай позицію. Побачимося в зоні.</p>
+        <a class="button button-primary button-cta" href="downloads/Killzone.exe" download>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m0 0 4-4m-4 4L6 8M3 14v3h14v-3"/></svg>
+          ЗАВАНТАЖИТИ KILLZONE
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
+        <span class="cta-note">WINDOWS · .EXE · БЕЗКОШТОВНО</span>
+      </div>
+      <span class="cta-coordinate" aria-hidden="true">НЕОН-ДИСТРИКТ / 04:17 AM</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">K</span><span class="brand-name">KILLZONE<span class="brand-period">.</span></span></a>
+    <span class="footer-copy">КОЖЕН ВИЖИВАЄ ПО-СВОЄМУ.</span>
+    <a class="back-top" href="#top">НА ПОЧАТОК <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
