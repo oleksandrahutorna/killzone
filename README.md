@@ -1,7 +1,10 @@
+
+
 # KILLZONE
+<img width="1662" height="918" alt="image" src="https://github.com/user-attachments/assets/e85744e2-350c-499e-80f5-052658153240" />
 
 KILLZONE — промосайт і Windows-збірка динамічного 2D survival-шутера. У грі потрібно досліджувати зони, відбивати хвилі ворогів, збирати монети та готуватися до бою з босом.
-
+<img width="200" height="200" alt="qr-code" src="https://github.com/user-attachments/assets/eb8d299f-5b71-43dc-a465-2b694284b196" />
 ## Зміст
 
 - [Склад проєкту](#склад-проєкту)
