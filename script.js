@@ -1,7 +1,5 @@
 "use strict";
 
-document.documentElement.classList.add("js-enabled");
-
 const marqueeTrack = document.querySelector(".signal-track");
 const marqueeGroup = marqueeTrack?.querySelector("[data-marquee-group]");
 
@@ -218,6 +216,7 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
     });
   }, { threshold: 0.12 });
   revealItems.forEach((item) => observer.observe(item));
+  document.documentElement.classList.add("js-enabled");
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
